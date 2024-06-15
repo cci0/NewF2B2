@@ -1,0 +1,64 @@
+@import '../styles/variables';
+
+@include mobile {
+    .recentAlbum-wrap {
+        padding: 20px 0;
+        background-color: $bg-color;
+
+        .title {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 20px;
+        }
+
+        .recent-album {
+            display: flex;
+            overflow-x: auto;
+            margin-top: 20px;
+            width: 100%;
+            scrollbar-width: none;
+
+            .recent-album-list {
+                margin-left: 20px;
+                // padding: 0 10px;
+                font-size: 12px;
+            }
+
+            .recent-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .recent-album-name {
+                    font-weight: 700;
+                    margin: 10px 0 5px;
+                }
+
+                .recent-album-genre {
+                    display: none;
+                }
+            }
+
+            .recent-album-detail {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+
+            .recent-album-artist {
+                margin-bottom: 5px;
+                font-size: 10px;
+            }
+        }
+
+        .recent-album::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+// @include semiMobile {
+// }
+// @include desktop {
+// }

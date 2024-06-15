@@ -1,0 +1,34 @@
+@import '../styles/variables';
+
+@include mobile {
+    .music-board-chart-wrap {
+        margin: 20px;
+
+        .chart-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $black;
+
+            .title {
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .more-view {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+
+                .more-view-icon {
+                    width: 12px;
+                }
+            }
+        }
+    }
+}
+// @include semiMobile {
+// }
+// @include desktop {
+// }
