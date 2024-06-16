@@ -38,7 +38,7 @@ export function GenreMusic() {
                 ))}
             </div>
 
-            <ul>
+            <ul className="cata-list-wrap">
                 {data.map((album, index) => (
                     <li key={album.id}>
                         <img src={album.image} alt={album.title} />
