@@ -1,0 +1,19 @@
+@import '../styles/variables';
+
+@include mobile {
+    .genre-music-wrap {
+        margin: 20px;
+        border-radius: 12px;
+
+        .title {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+    }
+}
+
+// @include semiMobile {
+// }
+// @include desktop {
+// }
