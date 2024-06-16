@@ -10,6 +10,83 @@
             font-weight: 700;
             margin: 20px 0;
         }
+
+        .genre-cate {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+
+            .cat-btn {
+                border: 1px solid $sub-purple;
+                border-radius: 12px;
+                background-color: transparent;
+                padding: 4px 16px;
+                margin-right: 10px;
+                cursor: pointer;
+
+                .cate-list {
+                    font-size: 12px;
+                    font-weight: 700;
+                    width: max-content;
+                }
+            }
+
+            .cat-btn.active {
+                background-color: $sub-purple;
+            }
+        }
+
+        .cate-list-wrap {
+            display: flex;
+            overflow-x: auto;
+            width: 100%;
+            scrollbar-width: none;
+            margin: 20px 0;
+
+            .cate-list {
+                margin-right: 20px;
+                font-size: 12px;
+                cursor: pointer;
+
+                .image-container {
+                    position: relative;
+                    display: inline-block;
+
+                    .play-icon {
+                        display: block;
+                        position: absolute;
+                        top: 5%;
+                        right: 5%;
+                        width: 14px;
+                    }
+
+                    .cate-album-img {
+                        display: block;
+                    }
+                }
+
+                .cate-album-info {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+
+                .cate-album-name {
+                    font-weight: 700;
+                    margin: 10px 0 5px;
+                }
+
+                .cate-album-title {
+                    margin-bottom: 5px;
+                }
+
+                .cate-album-artist {
+                    font-size: 10px;
+                }
+            }
+        }
     }
 }
 
