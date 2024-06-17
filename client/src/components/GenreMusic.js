@@ -49,7 +49,6 @@ export function GenreMusic() {
                             <img className="play-icon" src={`${process.env.PUBLIC_URL}/images/play.svg`} alt="재생" />
                             <img className="cate-album-img" src={album.image} alt={album.title} />
                         </div>
-                        <div className="cate-album-info cate-album-name">{album.albumName}</div>
                         <div className="cate-album-info cate-album-title">{album.title}</div>
                         <div className="cate-album-info cate-album-artist">{album.artist}</div>
                     </li>

@@ -12,7 +12,10 @@
         }
 
         .genre-cate {
-            display: flex;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-auto-flow: column;
+            grid-gap: 10px;
             overflow-x: auto;
             scrollbar-width: none;
 
@@ -21,7 +24,6 @@
                 border-radius: 12px;
                 background-color: transparent;
                 padding: 4px 16px;
-                margin-right: 10px;
                 cursor: pointer;
 
                 .cate-list {
@@ -74,13 +76,9 @@
                     -webkit-box-orient: vertical;
                 }
 
-                .cate-album-name {
+                .cate-album-title {
                     font-weight: 700;
                     margin: 10px 0 5px;
-                }
-
-                .cate-album-title {
-                    margin-bottom: 5px;
                 }
 
                 .cate-album-artist {

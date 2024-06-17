@@ -1,0 +1,9 @@
+@import '../styles/variables';
+
+@include mobile {
+    .navbar {
+        .logo {
+            width: 100px;
+        }
+    }
+}

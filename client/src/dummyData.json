@@ -1,7 +1,17 @@
 [
     {
-        "id": "1",
+        "id": "0",
         "albumName": "앨범 이름 1",
+        "title": "나의 X에게",
+        "genre": "팝",
+        "artist": "경서",
+        "releaseDate": "2024-06-01",
+        "image": "https://via.placeholder.com/100",
+        "change": 0
+    },
+    {
+        "id": "1",
+        "albumName": "앨범 이름 2",
         "title": "HEY A",
         "genre": "팝",
         "artist": "IVE",
@@ -11,7 +21,7 @@
     },
     {
         "id": "2",
-        "albumName": "앨범 이름 2",
+        "albumName": "앨범 이름 3",
         "title": "SPOT!",
         "genre": "인디",
         "artist": "ZICO",
@@ -21,7 +31,7 @@
     },
     {
         "id": "3",
-        "albumName": "앨범 이름 3",
+        "albumName": "앨범 이름 4",
         "title": "Magnetic",
         "genre": "댄스/아이돌",
         "artist": "ILLIT",
@@ -31,7 +41,7 @@
     },
     {
         "id": "4",
-        "albumName": "앨범 이름 4",
+        "albumName": "앨범 이름 5",
         "title": "Armageddon",
         "genre": "댄스/아이돌",
         "artist": "aespa",
@@ -41,7 +51,7 @@
     },
     {
         "id": "5",
-        "albumName": "앨범 이름 5",
+        "albumName": "앨범 이름 6",
         "title": "나는 아픈 건 딱 질색이니까",
         "genre": "댄스/아이돌",
         "artist": "(여자)아이들",
@@ -51,7 +61,7 @@
     },
     {
         "id": "6",
-        "albumName": "앨범 이름 6",
+        "albumName": "앨범 이름 7",
         "title": "첫 만남은 계획대로 되지 않아",
         "genre": "댄스/아이돌",
         "artist": "WS (투어스)",
@@ -61,7 +71,7 @@
     },
     {
         "id": "7",
-        "albumName": "앨범 이름 7",
+        "albumName": "앨범 이름 8",
         "title": "미안해 미워해 사랑해",
         "genre": "OST",
         "artist": "Crush",
@@ -71,7 +81,7 @@
     },
     {
         "id": "8",
-        "albumName": "앨범 이름 8",
+        "albumName": "앨범 이름 9",
         "title": "한 페이지가 될 수 있게",
         "genre": "밴드",
         "artist": "DAY6 (데이식스)",
@@ -81,7 +91,7 @@
     },
     {
         "id": "9",
-        "albumName": "앨범 이름 9",
+        "albumName": "앨범 이름 10",
         "title": "천상연",
         "genre": "랩/힙합",
         "artist": "이창섭",
@@ -91,7 +101,7 @@
     },
     {
         "id": "10",
-        "albumName": "앨범 이름 10",
+        "albumName": "앨범 이름 11",
         "title": "예뻤어",
         "genre": "알앤비/소울",
         "artist": "DAY6 (데이식스)",
@@ -101,7 +111,7 @@
     },
     {
         "id": "11",
-        "albumName": "앨범 이름 11",
+        "albumName": "앨범 이름 12",
         "title": "MAESTRO",
         "genre": "락/메탈",
         "artist": "세븐틴 (SEVENTEEN)",
@@ -111,7 +121,7 @@
     },
     {
         "id": "12",
-        "albumName": "앨범 이름 12",
+        "albumName": "앨범 이름 13",
         "title": "청춘찬가",
         "genre": "재즈",
         "artist": "세븐틴 (SEVENTEEN)",
@@ -121,7 +131,7 @@
     },
     {
         "id": "13",
-        "albumName": "앨범 이름 13",
+        "albumName": "앨범 이름 14",
         "title": "LALALI",
         "genre": "랩/힙합",
         "artist": "세븐틴 (SEVENTEEN)",
@@ -131,7 +141,7 @@
     },
     {
         "id": "14",
-        "albumName": "앨범 이름 14",
+        "albumName": "앨범 이름 15",
         "title": "SPELL",
         "genre": "발라드",
         "artist": "세븐틴 (SEVENTEEN)",
@@ -141,10 +151,30 @@
     },
     {
         "id": "15",
-        "albumName": "앨범 이름 15",
+        "albumName": "앨범 이름 16",
         "title": "24H",
         "genre": "포크/어쿠스틱",
         "artist": "세븐틴 (SEVENTEEN)",
+        "releaseDate": "2024-06-05",
+        "image": "https://via.placeholder.com/100",
+        "change": 0
+    },
+    {
+        "id": "16",
+        "albumName": "앨범 이름 17",
+        "title": "너랑 밤새고 싶어",
+        "genre": "해외/팝",
+        "artist": "10CM",
+        "releaseDate": "2024-06-05",
+        "image": "https://via.placeholder.com/100",
+        "change": 0
+    },
+    {
+        "id": "17",
+        "albumName": "앨범 이름 18",
+        "title": "부동의 첫사랑",
+        "genre": "해외/일본",
+        "artist": "10CM",
         "releaseDate": "2024-06-05",
         "image": "https://via.placeholder.com/100",
         "change": 0
