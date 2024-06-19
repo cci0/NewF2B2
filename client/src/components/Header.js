@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import '../styles/header.scss';
+import dummyData from '../dummyData.json'; // 데이터 임포트
 
 export function Header() {
     const [mbSidebar, setMbSidebar] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
 
     const toggleMbSidebar = () => {
         setMbSidebar(!mbSidebar);
@@ -14,15 +16,33 @@ export function Header() {
         setMbSidebar(false);
     };
 
+    // 검색어 변경 시 검색 수행
+    useEffect(() => {
+        if (searchQuery) {
+            const results = dummyData.filter(
+                (album) =>
+                    album.albumName.includes(searchQuery) ||
+                    album.title.includes(searchQuery) ||
+                    album.artist.includes(searchQuery)
+            );
+            setSearchResults(results);
+        } else {
+            setSearchResults([]);
+        }
+    }, [searchQuery]);
+
+    // 검색 입력 처리
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
+
     return (
         <header>
             <nav className="navbar">
                 {/* 모바일 버전 */}
-
                 <Link to={'/'}>
                     <img className="logo" src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="logo" />
                 </Link>
-
                 <div className="mb-hamburger-menu" onClick={toggleMbSidebar}>
                     <span className="line line1"></span>
                     <span className="line line2"></span>
@@ -32,15 +52,21 @@ export function Header() {
             {/* 모바일 사이드 바 */}
             {mbSidebar && (
                 <div className="mb-sidebar">
-                    <div className="mb-hamburger-menu" onClick={closeMbSidebar}>
-                        <span className="line line1">-</span>
-                        <span className="line line2">-</span>
-                        <span className="line line3">-</span>
+                    <div className="open-hamburger-menu" onClick={closeMbSidebar}>
+                        <span className="line line1"></span>
+                        <span className="line line2"></span>
+                        <span className="line line3"></span>
                     </div>
                     <ul className="mb-sidebar-menu">
-                        <li class="main-search">
-                            <input class="main-search-input" type="text" placeholder="FloB 검색" />
-                            <button class="main-search-button" type="button" onclick="searchAlbum()">
+                        <li className="main-search">
+                            <input
+                                className="main-search-input"
+                                type="text"
+                                placeholder="FloB 검색"
+                                value={searchQuery}
+                                onChange={handleSearchChange}
+                            />
+                            <button className="main-search-button" type="button">
                                 <img
                                     className="search-icon"
                                     src={`${process.env.PUBLIC_URL}/images/search.svg`}
@@ -48,6 +74,23 @@ export function Header() {
                                 />
                             </button>
                         </li>
+                        {/* 검색 결과 표시 */}
+                        {searchResults.length > 0 && (
+                            <li className="search-results">
+                                <ul>
+                                    {searchResults.map((album) => (
+                                        <li key={album.id}>
+                                            <Link to={`/album/${album.id}`}>
+                                                <img src={album.image} alt={album.albumName} />
+                                                <span>
+                                                    {album.title} - {album.artist}
+                                                </span>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        )}
                         <li>
                             <Link to={'/Login'}>
                                 <span>로그인</span>

@@ -137,6 +137,10 @@ video {
     vertical-align: baseline;
 }
 
+a {
+    text-decoration-line: none;
+}
+
 button,
 select {
     color: #333;

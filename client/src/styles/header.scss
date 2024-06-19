@@ -20,7 +20,6 @@
             .mb-hamburger-menu {
                 display: flex;
                 flex-direction: column;
-
                 cursor: pointer;
 
                 .line {
@@ -44,13 +43,62 @@
             background-color: $line-purple;
             z-index: 99999;
 
+            .open-hamburger-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin: 15px 0px 20px;
+                cursor: pointer;
+
+                .line {
+                    width: 24px;
+                    border: 1px solid;
+                    border-radius: 2px;
+                }
+
+                .line1 {
+                    transform: rotate(45deg) translateX(5%);
+                }
+
+                .line2 {
+                    margin: 5px 0;
+                    display: none;
+                }
+
+                .line3 {
+                    transform: rotate(-45deg) translateX(10%);
+                }
+            }
+
             .mb-sidebar-menu {
+                padding: 20px 0;
+
+                .main-search {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .main-search-input {
+                        border: 1px solid transparent;
+                        border-radius: 4px;
+                        width: 100%;
+                        outline: none;
+                    }
+
+                    .main-search-button {
+                        border: 1px solid transparent;
+                        background-color: transparent;
+
+                        .search-icon {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
                 li {
                     padding-bottom: 15px;
-
-                    span {
-                        margin: 0 10px;
-                    }
+                    font-weight: 700;
                 }
             }
         }
