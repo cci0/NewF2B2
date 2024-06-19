@@ -1,9 +1,58 @@
 @import '../styles/variables';
 
 @include mobile {
-    .navbar {
-        .logo {
-            width: 100px;
+    header {
+        position: fixed;
+        \padding: 20px;
+        width: -webkit-fill-available;
+        background-color: #fff;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                width: 70px;
+            }
+
+            .mb-hamburger-menu {
+                display: flex;
+                flex-direction: column;
+
+                cursor: pointer;
+
+                .line {
+                    width: 24px;
+                    border: 1px solid;
+                    border-radius: 2px;
+                }
+
+                .line2 {
+                    margin: 5px 0;
+                }
+            }
+        }
+        .mb-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 35%;
+            height: 100vh;
+            padding: 20px;
+            background-color: $line-purple;
+            z-index: 99999;
+
+            .mb-sidebar-menu {
+                li {
+                    padding-bottom: 15px;
+
+                    span {
+                        margin: 0 10px;
+                    }
+                }
+            }
         }
     }
 }
