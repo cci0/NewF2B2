@@ -76,47 +76,48 @@ export function Header() {
                         </li>
                         {/* 검색 결과 표시 */}
                         {searchResults.length > 0 && (
-                            <li className="search-results">
-                                <ul>
-                                    {searchResults.map((album) => (
-                                        <li key={album.id}>
-                                            <Link to={`/album/${album.id}`}>
-                                                <img src={album.image} alt={album.albumName} />
-                                                <span>
-                                                    {album.title} - {album.artist}
-                                                </span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </li>
+                            <ul className="search-results">
+                                {searchResults.map((album) => (
+                                    <li className="search-list" key={album.id}>
+                                        <Link className="search-toAlbum" to={`/album/${album.id}`}>
+                                            <img className="search-img" src={album.image} alt={album.albumName} />
+                                            <div className="search-info">
+                                                <div className="search-title">
+                                                    {album.title} &#183; {album.albumName}
+                                                </div>
+                                                <div className="search-artist"> {album.artist}</div>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         )}
-                        <li>
+                        <li className="bar-list">
                             <Link to={'/Login'}>
                                 <span>로그인</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="bar-list">
                             <Link to={'/Signup'}>
                                 <span>회원가입</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="bar-list">
                             <Link to={'/Calendar'}>
                                 <span>최신앨범</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="bar-list">
                             <Link to={'/TodoList'}>
                                 <span>FloB 차트</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="bar-list">
                             <Link to={'/MyDiary'}>
                                 <span>장르별음악</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="bar-list">
                             <Link to={'/MyDiary'}>
                                 <span>보관함</span>
                             </Link>
