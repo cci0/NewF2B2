@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/header.scss';
 import dummyData from '../dummyData.json'; // 데이터 임포트
 
 export function Header() {
+    const navigate = useNavigate();
     const [mbSidebar, setMbSidebar] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
@@ -34,6 +35,12 @@ export function Header() {
     // 검색 입력 처리
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
+    };
+
+    // 이동
+
+    const handleNavigation = (path) => {
+        navigate(path);
     };
 
     return (

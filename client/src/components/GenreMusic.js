@@ -3,15 +3,10 @@ import albumData from '../dummyData.json';
 
 import '../styles/genreMusic.scss';
 
-export function GenreMusic() {
-    const [albums, setAlbums] = useState([]);
+export function GenreMusic({ albums }) {
     const [activeCate, setActiveCate] = useState('All');
     const [data, setData] = useState(albumData);
     const categoryRefs = useRef([]);
-
-    useEffect(() => {
-        setAlbums(albumData);
-    }, []);
 
     const categories = ['All', ...new Set(albumData.map((album) => album.genre))];
 

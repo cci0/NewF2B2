@@ -5,13 +5,14 @@ import '../styles/login.scss';
 export default function Login() {
     const passwordRef = useRef();
 
+    // onClick={loginFunc()}
+
     return (
         <div className="login-sec">
             <div className="user-box">
                 <div className="login-title">로그인</div>
-                <form name="form-login">
+                <form className="form-login">
                     <div className="user-id">
-                        <i className="fa-solid fa-user-large"></i>
                         <input
                             type="text"
                             className="user-id-box"
@@ -22,7 +23,6 @@ export default function Login() {
                         />
                     </div>
                     <div className="user-pw">
-                        <i className="fa-solid fa-passport"></i>
                         <input
                             ref={passwordRef}
                             type="password"
@@ -35,13 +35,13 @@ export default function Login() {
                     </div>
                 </form>
 
-                <div class="id-save">
+                <div className="id-save">
                     <input type="checkbox" className="id-autoSave" id="idAutoSave" />
-                    <label for="idAutoSave">아이디 저장</label>
+                    <label htmlFor="idAutoSave">아이디 저장</label>
                 </div>
 
                 <div>
-                    <button type="button" className="login-btn" id="loginBtn" onclick="loginFunc()">
+                    <button type="button" className="login-btn" id="loginBtn">
                         로그인
                     </button>
                 </div>

@@ -4,13 +4,7 @@ import albumData from '../dummyData.json';
 
 import '../styles/todayTop.scss';
 
-export function TodayTop10() {
-    const [albums, setAlbums] = useState([]);
-
-    useEffect(() => {
-        setAlbums(albumData);
-    });
-
+export function TodayTop10({ albums }) {
     const getClassName = (change) => {
         if (change > 0) return 'rank-up';
         if (change < 0) return 'rank-down';

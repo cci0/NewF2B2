@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import albumData from '../dummyData.json';
-
 import '../styles/recentAlbum.scss';
 
-export function RecentAlbum() {
-    const [albums, setAlbums] = useState([]);
-
-    useEffect(() => {
-        setAlbums(albumData);
-    });
-
+export function RecentAlbum({ albums }) {
     return (
         <div className="recentAlbum-wrap">
             <div className="title">최근 앨범</div>
