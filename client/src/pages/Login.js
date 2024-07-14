@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 import '../styles/login.scss';
 
@@ -9,10 +10,12 @@ export default function Login() {
 
     return (
         <div className="login-sec">
+            <ToastContainer />
             <div className="user-box">
                 <div className="login-title">로그인</div>
                 <form className="form-login">
                     <div className="user-id">
+                        <img className="id-icon" src={`${process.env.PUBLIC_URL}/images/user-round.svg`} alt="아이디" />
                         <input
                             type="text"
                             className="user-id-box"
@@ -23,6 +26,8 @@ export default function Login() {
                         />
                     </div>
                     <div className="user-pw">
+                        <img className="pw-icon" src={`${process.env.PUBLIC_URL}/images/lock.svg`} alt="비밀번호" />
+
                         <input
                             ref={passwordRef}
                             type="password"
